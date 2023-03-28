@@ -6,15 +6,16 @@ import Title from '../Title'
 
 const PostList = ({ products }) => {
     const { name } = useParams();
+    const filtrado = name? products.filter(product=>product.category.name === name):products
     console.log(name);
     return (
         <div>
-            <Title title={`MOST POPULAR PRODUCTS${name}`} />
+            <Title title={`${name? name:"MOST POPULAR PRODUCTS"}`} />
             <Container sx={{ mt: 5, mb: 5 }}>
             
             
             <Grid container spacing={2} columns={16}>
-                {products.map((products) => (
+                {filtrado.map((products) => (
                     <Grid key={products.id} item xs={8}>
                             <Link to={`/item/${products.id}`} >
                             <PostItem products={products} />

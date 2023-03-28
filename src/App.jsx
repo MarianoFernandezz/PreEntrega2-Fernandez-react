@@ -12,7 +12,7 @@ import ResponsiveAppBar from './assets/Components/ResponsiveAppBar'
 function App() {
   const [products, setProducts] = useState([]);
   const { name } = useParams();
-  const urlApi = "https://api.escuelajs.co/api/v1/products?offset=0&limit=20";
+  const urlApi = "https://api.escuelajs.co/api/v1/products?offset=0&limit=35";
 
   // useEffect(() => {
   //   const getProducts = async () => {
@@ -26,11 +26,11 @@ function App() {
 
   // }, [name])
   
-  if (name) {
+  
     useEffect(() => {
       const getProducts = async () => {
         const { data } = await axios(urlApi);
-        setProducts(data.filter(product => product.category.name === name));
+        setProducts(data);
         console.log(data);
         console.log("filtrado");
       }
@@ -38,18 +38,6 @@ function App() {
       getProducts();
     }, [name]);
     
-  } else {
-    useEffect(() => {
-      const getProducts = async () => {
-        const { data } = await axios(urlApi);
-        setProducts(data);
-        console.log(data);
-        console.log("no filtrado");
-      }
-
-      getProducts();
-    }, [name]);
-  }
   console.log(products);
   console.log(name);
   return (
