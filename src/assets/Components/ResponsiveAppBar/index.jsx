@@ -13,6 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { Link } from 'react-router-dom';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 const pages = ["Electronics", "Shoes","Others"]
 
@@ -39,9 +40,11 @@ function ResponsiveAppBar() {
     };
 
     return (
-        <AppBar position="static">
+        <AppBar position="sticky">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
+                    <ShoppingCartIcon sx={{ ml: 2 }} />
+                    <span style={{color:"inherit"}} >6</span>
                     <Typography
                         variant="h6"
                         noWrap
@@ -49,6 +52,7 @@ function ResponsiveAppBar() {
                         href="/"
                         sx={{
                             mr: 2,
+                            ml:3,
                             display: { xs: 'none', md: 'flex' },
                             fontFamily: 'monospace',
                             fontWeight: 700,
@@ -57,9 +61,10 @@ function ResponsiveAppBar() {
                             textDecoration: 'none',
                         }}
                     >
-                        CHERRY STORE
+                        
+                        CHERRY STORE 
                     </Typography>
-
+                        
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                         <IconButton
                             size="large"
@@ -119,7 +124,7 @@ function ResponsiveAppBar() {
                         }}
                     >
                         {/* TITULO NAVBAR  */}
-                        CHERRY STORE
+                        CHERRY STORE 
                     </Typography>
                     <Box sx={{ textDecoration: 'none', flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => (
