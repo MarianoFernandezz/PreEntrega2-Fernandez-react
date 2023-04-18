@@ -14,9 +14,9 @@ const PostList = ({ products }) => {
             <Container sx={{ mt: 5, mb: 5 }}>
             
             
-            <Grid container spacing={2} columns={16}>
+            <Grid container spacing={1.50} columns={12}>
                 {filtrado.map((products) => (
-                    <Grid key={products.id} item xs={8}>
+                    <Grid key={products.id} item xs={6} md={4}>
                             <Link to={`/item/${products.id}`} >
                             <PostItem products={products} />
                     </Link>
