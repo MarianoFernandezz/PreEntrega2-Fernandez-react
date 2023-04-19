@@ -2,10 +2,12 @@ import { Container } from '@mui/material';
 import axios from 'axios';
 import { useEffect, useState } from 'react'
 import { Link, Route, Routes, useParams } from 'react-router-dom';
-import './App.css'
+import './App.css';
 import ItemDetailContainer from './assets/Components/ItemDetailContainer';
 import PostList from './assets/Components/PostList';
-import ResponsiveAppBar from './assets/Components/ResponsiveAppBar'
+import ResponsiveAppBar from './assets/Components/ResponsiveAppBar';
+import database from "../database/firebase-config";
+import { getDocs, collection } from "firebase/firestore";
 
 
 
@@ -14,30 +16,19 @@ function App() {
   const { name } = useParams();
   const urlApi = "https://api.escuelajs.co/api/v1/products?offset=0&limit=35";
 
-  // useEffect(() => {
-  //   const getProducts = async () => {
-  //     const { data } = axios(urlApi);
-  //     if (name) {
-  //       setProducts(data.filter((producto) => producto.category.name === name))
-  //     } else {
-  //       setProducts(data);
-  //     }
-  //   };  getProducts()
+  // referencia a los productos de nuestra database (firesotre)
+  const productsRef = collection(database, "productos");
 
-  // }, [name])
-  
-  
-    useEffect(() => {
-      const getProducts = async () => {
-        const { data } = await axios(urlApi);
-        setProducts(data);
-        console.log(data);
-        console.log("filtrado");
-      }
-  
-      getProducts();
-    }, [name]);
-    
+  // funcion que nos trae la colleccion de firestore
+  const getProductsRef = async () => {
+    const itemsCollection = await getDocs(productsRef);
+    const itemsData = itemsCollection.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+    setProducts(itemsData);
+  }
+  useEffect(() => {
+    getProductsRef();
+  }, []);
+
   console.log(products);
   console.log(name);
   return (
@@ -55,30 +46,15 @@ function App() {
 
 export default App
 
+// como usar useEffect con Apis
+    // useEffect(() => {
+    //   const getProducts = async () => {
+    //     const { data } = await axios(urlApi);
+    //     setProducts(data);
+    //     console.log(data);
+    //     console.log("filtrado");
+    //   }
+  
+    //   getProducts();
+    // }, [name]);
 
-// useEffect(() => {
-//   const getProducts = async () => {
-//     const { data } = await axios(urlApi);
-//     if (name) {
-//       setProducts(data.filter(product => product.category.name === name));
-//       console.log(data);
-//       console.log("filtrado");
-//     }}
-
-//   getProducts();
-// }, [name]);
-
-// useEffect(() => {
-//   const getProducts = async () => {
-//     const { data } = await axios(urlApi);
-//     if (name) {
-//       setProducts(data.filter(product => product.category.name === name));
-//       console.log(data);
-//       console.log("filtrado");
-//     } else {
-//       setProducts(data);
-//     };
-//   }; getProducts();
-
-
-// }, [name])
