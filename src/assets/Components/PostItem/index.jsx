@@ -12,7 +12,7 @@ export default function PostItem({products}) {
             <CardMedia
                 sx={{ height: 200 }}
                 image={products.images}
-                title="green iguana"
+                title={products.title}
             />
             <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
