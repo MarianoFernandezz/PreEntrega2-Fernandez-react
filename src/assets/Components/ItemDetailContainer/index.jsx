@@ -2,20 +2,25 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
 import PostItem from "../PostItem";
+import database from "../../../../database/firebase-config";
+import { getDoc , doc } from "firebase/firestore";
 
 
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState({});
     const { id } = useParams();
-    const get = async () => {
-        const res = await axios(`https://api.escuelajs.co/api/v1/products/${id}`);
-        setProduct(res.data);
-        console.log(id);
-        console.log(product);
-        console.log(res.data);
+    // referencia al query doc (db , nombre de collecion , [lo que queremos traer])
+    const queryDoc = doc(database, "productos", id)
+    // funcion para obtener producto por id de la db
+    const getProductId = async () => {
+        // guardamos en una variable los datos traidos por la referencia
+        const productId = await getDoc(queryDoc);
+        // seteamos el producto por id y el objecto
+        setProduct({ id: productId.id, ...productId.data() })
+        ;
     }
     useEffect(() => {
-        get()
+        getProductId()
     
 
     }, [id]);

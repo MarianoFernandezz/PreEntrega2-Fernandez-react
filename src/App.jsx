@@ -29,8 +29,6 @@ function App() {
     getProductsRef();
   }, []);
 
-  console.log(products);
-  console.log(name);
   return (
     <div>
       <ResponsiveAppBar />
