@@ -1,6 +1,6 @@
 .container {
-    max-width: 1300px;
-    min-width: 320px;
+    max-width: 1200px;
+    min-width: 310px;
     width: 100%;
     margin: 100px auto;
     box-shadow: 0 0 5px #ccc;
@@ -32,7 +32,7 @@
 .details .box {
     max-width: 500px;
     min-width: 290px;
-    margin: 25px;
+    margin: 10px;
 }
 
 .box .row {
@@ -55,6 +55,48 @@
     line-height: 1.5;
     margin: 15px 0;
 }
+.containerCounter {
+    display: flex;
+    justify-content: space-between;
+    width:100% ;
+    background-color: white;
+    border-radius: .5rem;
+    border:solid 1px #ccc;
+    padding: 1rem;
+}
+.button {
+    padding: 3px;
+    border-style: none;
+    background-color: white;
+    color: black;
+    font-weight: bolder;
+    
+}
+.button:hover {
+    padding: 3px;
+    width: 20px;
+    height: 20px;
+    background-color: #ccc;
+    color: black;
+
+}
+.buttonAddToCard {
+    margin-top: 15px;
+    width: 100%;
+    height: 55px;
+    border-style: none;
+    border-radius: 0.5rem;
+    background-color: #6573c3;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 2px;
+}
+.buttonAddToCard:hover {
+background-color: rgb(204, 224, 241);
+color: #6573c3;
+border: solid 1px #6573c3; 
+transition: all ease ease-in 5ms;
+}
 @media (max-width: 500px) {
     img {
         width: 200px;
@@ -66,6 +108,12 @@
         width: 200px;
         height: 200px;
     }
+        .container {
+            
+            
+            margin: 50px auto;
+            
+        }
 }
 
 @media (max-width: 1200px) {
