@@ -8,11 +8,12 @@ import PostList from './assets/Components/PostList';
 import ResponsiveAppBar from './assets/Components/ResponsiveAppBar';
 import database from "../database/firebase-config";
 import { getDocs, collection } from "firebase/firestore";
+import Spinner from './assets/Components/Spinner';
 
 
 
 function App() {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState(null);
   const { name } = useParams();
   const urlApi = "https://api.escuelajs.co/api/v1/products?offset=0&limit=35";
 
@@ -26,8 +27,15 @@ function App() {
     setProducts(itemsData);
   }
   useEffect(() => {
-    getProductsRef();
+    setTimeout(() => {
+      
+      getProductsRef();
+    }, 500);
   }, []);
+
+  if (!products) {
+    return <Spinner/>;
+  }
 
   return (
     <div>

@@ -4,10 +4,12 @@ import { useParams } from "react-router-dom"
 import PostItem from "../PostItem";
 import database from "../../../../database/firebase-config";
 import { getDoc , doc } from "firebase/firestore";
+import PostItemDetail from "../PostItemDetail";
+import Spinner from "../Spinner";
 
 
 const ItemDetailContainer = () => {
-    const [product, setProduct] = useState({});
+    const [product, setProduct] = useState(null);
     const { id } = useParams();
     // referencia al query doc (db , nombre de collecion , [lo que queremos traer])
     const queryDoc = doc(database, "productos", id)
@@ -20,14 +22,20 @@ const ItemDetailContainer = () => {
         ;
     }
     useEffect(() => {
-        getProductId()
+        setTimeout(() => {
+            
+            getProductId()
+        }, 500);
     
 
     }, [id]);
-    
+    if (!product) {
+        return <Spinner />;
+    }
     return (
         <div>
-            <PostItem products={product} />
+            <PostItemDetail products={product}/>
+            {/* <PostItem products={product} /> */}
             {/* <button onClick={(()=> console.log(product)) } > hola</button> */}
         </div>
     )

@@ -128,7 +128,7 @@ function ResponsiveAppBar() {
                     </Typography>
                     <Box sx={{ textDecoration: 'none', flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => (
-                            <Link to={`/category/${page}`} >
+                            <Link key={page} to={`/category/${page}`} >
 
                                 <Button
                                     key={page}
