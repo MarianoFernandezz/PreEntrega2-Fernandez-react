@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import style from './postItemDetail.module.css'
 import { CardMedia } from '@mui/material'
+import ItemQuantitySelector from '../ItemQuantitySelector';
+import AddItemButton from '../AddItemButton';
 
 const PostItemDetail = ({ products }) => {
     const [counter, setCounter] = useState(1);
@@ -19,12 +21,8 @@ const PostItemDetail = ({ products }) => {
                     <span> $ {products.price} </span>
                     <p>DESCRIPCION :</p>
                     <p>{products.description}</p>
-                    <div className={style.containerCounter}>
-                        <button className={style.button} onClick={restarContador}> - </button>
-                        <span>{counter}</span>
-                        <button className={style.button} onClick={sumarContador}> + </button>
-                    </div>
-                        <button className={style.buttonAddToCard}>ADD TO CART</button>
+                    <ItemQuantitySelector/>
+                    <AddItemButton/>
 
                 </div>
             </div>
