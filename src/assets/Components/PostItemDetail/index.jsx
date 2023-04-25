@@ -1,13 +1,9 @@
-import React, { useState } from 'react'
+import React  from 'react'
 import style from './postItemDetail.module.css'
-import { CardMedia } from '@mui/material'
 import ItemQuantitySelector from '../ItemQuantitySelector';
 import AddItemButton from '../AddItemButton';
 
 const PostItemDetail = ({ products }) => {
-    const [counter, setCounter] = useState(1);
-    const sumarContador = () => { setCounter(counter + 1) };
-    const restarContador = () => { setCounter(counter > 1 ? counter - 1 : counter) }
     return (
         <div className={style.container}>
             <div className={style.details}>
