@@ -44,6 +44,7 @@ function App() {
         <Route path='/' element={<PostList products={products} />} />
         <Route path='/item/:id' element={<ItemDetailContainer />} />
         <Route path='/category/:name' element={<PostList products={products} />} />
+        <Route path='/cart' element={<h1>Esto es el carrito</h1>}/>
       </Routes>
       
     </div>
