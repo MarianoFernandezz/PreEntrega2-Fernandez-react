@@ -43,7 +43,12 @@ function ResponsiveAppBar() {
         <AppBar position="sticky">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    <ShoppingCartIcon sx={{ ml: 2 }} />
+                    <Link to='/cart' >
+                        <ShoppingCartIcon sx={{
+                            ml: 2,
+                            color:"white"
+}} />
+                    </Link>
                     <span style={{color:"inherit"}} >6</span>
                     <Typography
                         variant="h6"

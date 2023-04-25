@@ -12,7 +12,7 @@ const PostItemDetail = ({ products }) => {
         <div className={style.container}>
             <div className={style.details}>
                 <div className='big-img'>
-                    <img src={products.images} height={"400px"} alt="" />
+                    <img src={products.images} alt="" />
                 </div>
                 <div className={style.box}>
                     <div className={style.row}>

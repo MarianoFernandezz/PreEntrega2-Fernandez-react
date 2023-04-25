@@ -116,7 +116,7 @@ transition: all ease ease-in 5ms;
         }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1920px) {
     img {
         width: 400px;
         height: 300px;
