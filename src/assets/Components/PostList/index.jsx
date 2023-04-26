@@ -7,7 +7,7 @@ import Title from '../Title'
 const PostList = ({ products }) => {
     const { name } = useParams();
     const filtrado = name? products.filter(product=>product.category.name === name):products
-    console.log(name);
+    
     return (
         <div>
             <Title title={`${name? name:"MOST POPULAR PRODUCTS"}`} />

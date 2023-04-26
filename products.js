@@ -1,7 +1,7 @@
 
 const productos =[
     {
-        id: 2,
+        
         title: "nuevo Title",
         price: 10000,
         description: "new description",
@@ -11,7 +11,7 @@ const productos =[
         creationAt: "2023-04-19T10:32:15.000Z",
         updatedAt: "2023-04-19T22:46:54.000Z",
         category: {
-            id: 1,
+            
             name: "Clothes",
             image: "https://picsum.photos/640/640?r=6880",
             creationAt: "2023-04-19T10:32:15.000Z",
@@ -19,7 +19,7 @@ const productos =[
         }
     },
     {
-        id: 3,
+        
         title: "Refined Plastic Shirt",
         price: 369,
         description: "The Football Is Good For Training And Recreational Purposes",
@@ -31,7 +31,7 @@ const productos =[
         creationAt: "2023-04-19T10:32:15.000Z",
         updatedAt: "2023-04-19T10:32:15.000Z",
         category: {
-            id: 4,
+            
             name: "Shoes",
             image: "https://picsum.photos/640/640?r=7426",
             creationAt: "2023-04-19T10:32:15.000Z",
@@ -39,7 +39,7 @@ const productos =[
         }
     },
     {
-        id: 5,
+        
         title: "Licensed Wooden Shoes",
         price: 455,
         description: "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
@@ -51,7 +51,7 @@ const productos =[
         creationAt: "2023-04-19T10:32:15.000Z",
         updatedAt: "2023-04-19T10:32:15.000Z",
         category: {
-            id: 4,
+            
             name: "Shoes",
             image: "https://picsum.photos/640/640?r=7426",
             "creationAt": "2023-04-19T10:32:15.000Z",
@@ -59,7 +59,7 @@ const productos =[
         }
     },
     {
-        id: 7,
+        
         title: "Siiiiiuuuuu",
         price: 10000,
         description: "Desarrollo Frontend especializado 😎",
@@ -69,7 +69,7 @@ const productos =[
         "creationAt": "2023-04-19T10:32:15.000Z",
         "updatedAt": "2023-04-19T22:48:40.000Z",
         category: {
-            id: 1,
+            
             name: "Clothes",
             image: "https://picsum.photos/640/640?r=6880",
             "creationAt": "2023-04-19T10:32:15.000Z",
@@ -77,7 +77,7 @@ const productos =[
         }
     },
     {
-        id: 9,
+        
         title: "Unbranded Concrete Hat",
         price: 241,
         description: "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive",
@@ -89,7 +89,7 @@ const productos =[
         creationAt: "2023-04-19T10:32:15.000Z",
         "updatedAt": "2023-04-19T10:32:15.000Z",
         category: {
-            id: 1,
+            
             name: "Clothes",
             "image": "https://picsum.photos/640/640?r=6880",
             "creationAt": "2023-04-19T10:32:15.000Z",
@@ -97,7 +97,7 @@ const productos =[
         }
     },
     {
-        id: 10,
+        
         title: "Tasty Plastic Fish",
         price: 676,
         description: "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive",
@@ -109,7 +109,7 @@ const productos =[
         creationAt: "2023-04-19T10:32:15.000Z",
         updatedAt: "2023-04-19T10:32:15.000Z",
         category: {
-            id: 3,
+            
             name: "Furniture",
             image: "https://picsum.photos/640/640?r=7786",
             "creationAt": "2023-04-19T10:32:15.000Z",
@@ -117,7 +117,7 @@ const productos =[
         }
     },
     {
-        id: 11,
+        
         title: "Ergonomic Cotton Towels",
         price: 588,
         "description": "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
@@ -129,7 +129,7 @@ const productos =[
         "creationAt": "2023-04-19T10:32:15.000Z",
         "updatedAt": "2023-04-19T10:32:15.000Z",
         category: {
-            id: 3,
+            
             name: "Furniture",
             image: "https://picsum.photos/640/640?r=7786",
             creationAt: "2023-04-19T10:32:15.000Z",
@@ -137,7 +137,7 @@ const productos =[
         }
     },
     {
-        id: 12,
+        
         title: "Bespoke Rubber Bacon",
         price: 804,
         description: "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
@@ -149,7 +149,7 @@ const productos =[
         "creationAt": "2023-04-19T10:32:15.000Z",
         "updatedAt": "2023-04-19T10:32:15.000Z",
         category: {
-            id: 2,
+            
             name: "Electronics",
             image: "https://picsum.photos/640/640?r=2279",
             "creationAt": "2023-04-19T10:32:15.000Z",
@@ -157,7 +157,7 @@ const productos =[
         }
     },
     {
-        id: 13,
+        
         title: "Intelligent Frozen Hat",
         price: 341,
         description: "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
@@ -169,7 +169,7 @@ const productos =[
         "creationAt": "2023-04-19T10:32:15.000Z",
         "updatedAt": "2023-04-19T10:32:15.000Z",
         category: {
-            id: 2,
+            
             name: "Electronics",
             image: "https://picsum.photos/640/640?r=2279",
             creationAt: "2023-04-19T10:32:15.000Z",
@@ -177,7 +177,7 @@ const productos =[
         }
     },
     {
-        id: 14,
+        
         title: "Luxurious Bronze Salad",
         price: 732,
         description: "The Football Is Good For Training And Recreational Purposes",
@@ -189,7 +189,7 @@ const productos =[
         "creationAt": "2023-04-19T10:32:15.000Z",
         "updatedAt": "2023-04-19T10:32:15.000Z",
         category: {
-            id: 2,
+            
             name: "Electronics",
             image: "https://picsum.photos/640/640?r=2279",
             "creationAt": "2023-04-19T10:32:15.000Z",
@@ -197,7 +197,7 @@ const productos =[
         }
     },
     {
-        id: 15,
+        
         title: "Handcrafted Fresh Chair",
         price: 561,
         description: "Andy shoes are designed to keeping in mind durability as well as trends, the most stylish range of shoes & sandals",
@@ -217,7 +217,7 @@ const productos =[
         }
     },
     {
-        id: 16,
+        
         title: "Tasty Concrete Table",
         price: 661,
         description: "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
@@ -229,7 +229,7 @@ const productos =[
         "creationAt": "2023-04-19T10:32:15.000Z",
         "updatedAt": "2023-04-19T10:32:15.000Z",
         category: {
-            id: 4,
+            
             name: "Shoes",
             image: "https://picsum.photos/640/640?r=7426",
             "creationAt": "2023-04-19T10:32:15.000Z",
@@ -237,7 +237,7 @@ const productos =[
         }
     },
     {
-        id: 17,
+        
         title: "Bespoke Fresh Bike",
         price: 595,
         description: "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
@@ -249,7 +249,7 @@ const productos =[
         "creationAt": "2023-04-19T10:32:15.000Z",
         "updatedAt": "2023-04-19T10:32:15.000Z",
         category: {
-            id: 2,
+            
             name: "Electronics",
             image: "https://picsum.photos/640/640?r=2279",
             "creationAt": "2023-04-19T10:32:15.000Z",
@@ -257,7 +257,7 @@ const productos =[
         }
     },
     {
-        id: 18,
+        
         title: "Unbranded Rubber Mouse",
         price: 947,
         description: "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
@@ -269,7 +269,7 @@ const productos =[
         "creationAt": "2023-04-19T10:32:15.000Z",
         "updatedAt": "2023-04-19T10:32:15.000Z",
         category: {
-            id: 2,
+            
             name: "Electronics",
             image: "https://picsum.photos/640/640?r=2279",
             "creationAt": "2023-04-19T10:32:15.000Z",
@@ -277,7 +277,7 @@ const productos =[
         }
     },
     {
-        id: 19,
+        
         title: "Fantastic Cotton Tuna",
         price: 959,
         description: "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
@@ -289,7 +289,7 @@ const productos =[
         "creationAt": "2023-04-19T10:32:15.000Z",
         "updatedAt": "2023-04-19T10:32:15.000Z",
         category: {
-            id: 3,
+            
             name: "Furniture",
             image: "https://picsum.photos/640/640?r=7786",
             creationAt: "2023-04-19T10:32:15.000Z",
@@ -297,7 +297,7 @@ const productos =[
         }
     },
     {
-        id: 20,
+        
         title: "Small Steel Tuna",
         price: 938,
         description: "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
@@ -309,7 +309,7 @@ const productos =[
         "creationAt": "2023-04-19T10:32:15.000Z",
         "updatedAt": "2023-04-19T10:32:15.000Z",
         category: {
-            id: 1,
+            
             name: "Clothes",
             image: "https://picsum.photos/640/640?r=6880",
             "creationAt": "2023-04-19T10:32:15.000Z",
@@ -317,7 +317,7 @@ const productos =[
         }
     },
     {
-        id: 21,
+        
         title: "Small Wooden Shirt",
         price: 151,
         description: "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
@@ -329,7 +329,7 @@ const productos =[
         "creationAt": "2023-04-19T10:32:15.000Z",
         "updatedAt": "2023-04-19T10:32:15.000Z",
         category: {
-            id: 4,
+            
             name: "Shoes",
             image: "https://picsum.photos/640/640?r=7426",
             "creationAt": "2023-04-19T10:32:15.000Z",
@@ -337,7 +337,7 @@ const productos =[
         }
     },
     {
-        id: 22,
+        
         title: "Recycled Metal Chips",
         price: 914,
         description: "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
@@ -349,7 +349,7 @@ const productos =[
         "creationAt": "2023-04-19T10:32:15.000Z",
         "updatedAt": "2023-04-19T10:32:15.000Z",
         category: {
-            id: 5,
+            
             name: "Others",
             image: "https://picsum.photos/640/640?r=8414",
             "creationAt": "2023-04-19T10:32:15.000Z",
@@ -357,7 +357,7 @@ const productos =[
         }
     },
     {
-        id: 23,
+        
         title: "Refined Soft Shirt",
         price: 448,
         description: "The Football Is Good For Training And Recreational Purposes",
@@ -369,7 +369,7 @@ const productos =[
         "creationAt": "2023-04-19T10:32:15.000Z",
         "updatedAt": "2023-04-19T10:32:15.000Z",
         category: {
-            id: 4,
+            
             name: "Shoes",
             image: "https://picsum.photos/640/640?r=7426",
             "creationAt": "2023-04-19T10:32:15.000Z",
@@ -377,7 +377,7 @@ const productos =[
         }
     },
     {
-        id: 24,
+        
         title: "Tasty Steel Cheese",
         price: 66,
         description: "Carbonite web goalkeeper gloves are ergonomically designed to give easy fit",
@@ -389,7 +389,7 @@ const productos =[
         "creationAt": "2023-04-19T10:32:15.000Z",
         "updatedAt": "2023-04-19T10:32:15.000Z",
         category: {
-            id: 3,
+            
             name: "Furniture",
             image: "https://picsum.photos/640/640?r=7786",
             "creationAt": "2023-04-19T10:32:15.000Z",
@@ -397,7 +397,7 @@ const productos =[
         }
     },
     {
-        id: 25,
+        
         title: "Oriental Rubber Chicken",
         price: 658,
         description: "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",
@@ -409,7 +409,7 @@ const productos =[
         "creationAt": "2023-04-19T10:32:15.000Z",
         "updatedAt": "2023-04-19T10:32:15.000Z",
         category: {
-            id: 1,
+            
             name: "Clothes",
             image: "https://picsum.photos/640/640?r=6880",
             "creationAt": "2023-04-19T10:32:15.000Z",
@@ -417,7 +417,7 @@ const productos =[
         }
     },
     {
-        id: 26,
+        
         title: "Awesome Metal Computer",
         price: 609,
         description: "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
@@ -429,7 +429,7 @@ const productos =[
         "creationAt": "2023-04-19T10:32:15.000Z",
         "updatedAt": "2023-04-19T10:32:15.000Z",
         category: {
-            id: 5,
+            
             name: "Others",
             image: "https://picsum.photos/640/640?r=8414",
             "creationAt": "2023-04-19T10:32:15.000Z",
@@ -437,7 +437,7 @@ const productos =[
         }
     },
     {
-        id: 27,
+        
         title: "Fantastic Rubber Ball",
         price: 501,
         description: "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
@@ -449,7 +449,7 @@ const productos =[
         "creationAt": "2023-04-19T10:32:15.000Z",
         "updatedAt": "2023-04-19T10:32:15.000Z",
         category: {
-            id: 5,
+            
             name: "Others",
             image: "https://picsum.photos/640/640?r=8414",
             "creationAt": "2023-04-19T10:32:15.000Z",
@@ -457,7 +457,7 @@ const productos =[
         }
     },
     {
-        id: 28,
+        
         title: "Bespoke Frozen Sausages",
         price: 22,
         description: "The Apollotech B340 is an affordable wireless mouse with reliable connectivity, 12 months battery life and modern design",
@@ -469,7 +469,7 @@ const productos =[
         "creationAt": "2023-04-19T10:32:15.000Z",
         "updatedAt": "2023-04-19T10:32:15.000Z",
         category: {
-            id: 2,
+            
             name: "Electronics",
             image: "https://picsum.photos/640/640?r=2279",
             "creationAt": "2023-04-19T10:32:15.000Z",
@@ -477,7 +477,7 @@ const productos =[
         }
     },
     {
-        id: 29,
+        
         title: "Electronic Cotton Shoes",
         price: 347,
         description: "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
@@ -489,7 +489,7 @@ const productos =[
         "creationAt": "2023-04-19T10:32:15.000Z",
         "updatedAt": "2023-04-19T10:32:15.000Z",
         category: {
-            id: 2,
+            
             name: "Electronics",
             image: "https://picsum.photos/640/640?r=2279",
             creationAt: "2023-04-19T10:32:15.000Z",
@@ -497,7 +497,7 @@ const productos =[
         }
     },
     {
-        id: 30,
+        
         title: "Ergonomic Rubber Bike",
         price: 562,
         description: "New ABC 13 9370, 13.3, 5th Gen CoreA5-8250U, 8GB RAM, 256GB SSD, power UHD Graphics, OS 10 Home, OS Office A & J 2016",
@@ -509,7 +509,7 @@ const productos =[
         "creationAt": "2023-04-19T10:32:15.000Z",
         "updatedAt": "2023-04-19T10:32:15.000Z",
         category: {
-            id: 1,
+            
             name: "Clothes",
             image: "https://picsum.photos/640/640?r=6880",
             "creationAt": "2023-04-19T10:32:15.000Z",
@@ -517,7 +517,7 @@ const productos =[
         }
     },
     {
-        id: 31,
+        
         title: "Awesome Metal Keyboard",
         price: 379,
         description: "The automobile layout consists of a front-engine design, with transaxle-type transmissions mounted at the rear of the engine and four wheel drive",
@@ -529,7 +529,7 @@ const productos =[
         "creationAt": "2023-04-19T10:32:15.000Z",
         "updatedAt": "2023-04-19T10:32:15.000Z",
         category: {
-            id: 3,
+            
             name: "Furniture",
             image: "https://picsum.photos/640/640?r=7786",
             "creationAt": "2023-04-19T10:32:15.000Z",
@@ -537,7 +537,7 @@ const productos =[
         }
     },
     {
-        id: 32,
+        
         title: "Intelligent Plastic Shirt",
         price: 619,
         description: "Boston's most advanced compression wear technology increases muscle oxygenation, stabilizes active muscles",
@@ -549,7 +549,7 @@ const productos =[
         "creationAt": "2023-04-19T10:32:15.000Z",
         "updatedAt": "2023-04-19T10:32:15.000Z",
         category: {
-            id: 1,
+            
             name: "Clothes",
             image: "https://picsum.photos/640/640?r=6880",
             "creationAt": "2023-04-19T10:32:15.000Z",
@@ -569,7 +569,7 @@ const productos =[
         "creationAt": "2023-04-19T10:32:15.000Z",
         "updatedAt": "2023-04-19T10:32:15.000Z",
         category: {
-            id: 2,
+            
             name: "Electronics",
             image: "https://picsum.photos/640/640?r=2279",
             "creationAt": "2023-04-19T10:32:15.000Z",
@@ -577,7 +577,7 @@ const productos =[
         }
     },
     {
-        id: 34,
+        
         title: "Intelligent Bronze Mouse",
         price: 820,
         description: "The Nagasaki Lander is the trademarked name of several series of Nagasaki sport bikes, that started with the 1984 ABC800J",
@@ -589,7 +589,7 @@ const productos =[
         "creationAt": "2023-04-19T10:32:15.000Z",
         "updatedAt": "2023-04-19T10:32:15.000Z",
         category: {
-            id: 4,
+            
             name: "Shoes",
             image: "https://picsum.photos/640/640?r=7426",
             creationAt: "2023-04-19T10:32:15.000Z",
@@ -597,7 +597,7 @@ const productos =[
         }
     },
     {
-        id: 35,
+        
         title: "Ergonomic Frozen Soap",
         price: 987,
         description: "Ergonomic executive chair upholstered in bonded black leather and PVC padded seat and back for all-day comfort and support",
@@ -609,7 +609,7 @@ const productos =[
         "creationAt": "2023-04-19T10:32:15.000Z",
         "updatedAt": "2023-04-19T10:32:15.000Z",
         category: {
-            id: 5,
+            
             name: "Others",
             image: "https://picsum.photos/640/640?r=8414",
             "creationAt": "2023-04-19T10:32:15.000Z",
@@ -617,7 +617,7 @@ const productos =[
         }
     },
     {
-        id: 36,
+        
         title: "Ergonomic Metal Hat",
         price: 15,
         description: "New range of formal shirts are designed keeping you in mind. With fits and styling that will make you stand apart",
@@ -629,7 +629,7 @@ const productos =[
         "creationAt": "2023-04-19T10:32:15.000Z",
         "updatedAt": "2023-04-19T10:32:15.000Z",
         category: {
-            id: 3,
+            
             name: "Furniture",
             image: "https://picsum.photos/640/640?r=7786",
             "creationAt": "2023-04-19T10:32:15.000Z",
