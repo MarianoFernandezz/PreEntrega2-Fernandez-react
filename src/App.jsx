@@ -10,6 +10,7 @@ import database from "../database/firebase-config";
 import { getDocs, collection } from "firebase/firestore";
 import Spinner from './assets/Components/Spinner';
 import CartProvider, { CartContext } from './assets/contexts/CartContext';
+import CartWiew from './assets/Components/CardWiew';
 
 
 
@@ -40,15 +41,15 @@ function App() {
 
   return (
     <div>
-      <ResponsiveAppBar />
       {/* //Componente que provee el valor del context y envuelve los hijos */}
       <CartProvider>
+      <ResponsiveAppBar />
         {/* //dentro del CartProvider irian los hijos que consumiran el context */}
         <Routes>
           <Route path='/' element={<PostList products={products} />} />
           <Route path='/item/:id' element={<ItemDetailContainer />} />
           <Route path='/category/:name' element={<PostList products={products} />} />
-          <Route path='/cart' element={<h1>Esto es el carrito</h1>}/>
+          <Route path='/cart' element={<CartWiew/>}/>
         </Routes>
       </CartProvider>
       

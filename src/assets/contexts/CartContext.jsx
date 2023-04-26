@@ -23,7 +23,7 @@ const CartProvider = ({ children }) => {
             newCart = [...cart , product]
         }
         setCart(newCart);
-        alert("Producto agregado al carrito");
+        alert("Producto Agregado");
     }
     console.log(cart)
     // funcion para limpiar el carrito
@@ -41,6 +41,7 @@ const CartProvider = ({ children }) => {
             isInCart,
             removeProduct,
             addToCard,
+            cart
         }}>
             {children}
         </CartContext.Provider>

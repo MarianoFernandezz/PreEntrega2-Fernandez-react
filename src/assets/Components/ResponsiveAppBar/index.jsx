@@ -14,6 +14,8 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import { Link } from 'react-router-dom';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { useContext } from 'react';
+import { CartContext } from '../../contexts/CartContext';
 
 const pages = ["Electronics", "Shoes","Others"]
 
@@ -38,6 +40,7 @@ function ResponsiveAppBar() {
     const handleCloseUserMenu = () => {
         setAnchorElUser(null);
     };
+    const { cart } = useContext(CartContext);
 
     return (
         <AppBar position="sticky">
@@ -49,7 +52,7 @@ function ResponsiveAppBar() {
                             color:"white"
 }} />
                     </Link>
-                    <span style={{color:"inherit"}} >6</span>
+                    <span style={{ color: "inherit" }} >{cart.length}</span>
                     <Typography
                         variant="h6"
                         noWrap
