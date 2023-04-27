@@ -12,7 +12,7 @@
 
 .buttonAddToCard:hover {
     background-color: rgb(204, 224, 241);
-    color: #6573c3;
-    border: solid 1px #6573c3;
+    color: #1976d2;
+    border: solid 1px #1976d2;
     transition: all ease ease-in 5ms;
 }
