@@ -1,13 +1,21 @@
 import React, { useContext } from 'react'
 import { CartContext } from '../../contexts/CartContext'
 import style from './main.module.css'
+import Button from '../Button';
+import { Link } from 'react-router-dom';
+import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 
 const CartWiew = () => {
     const { cart } = useContext(CartContext);
     const { totalPrice } = useContext(CartContext);
     const { removeProduct } = useContext(CartContext);
     if (cart.length == 0) {
-        return <h1>Your cart is empty...</h1>
+        return <div className={style.containerCardEmpty}>
+                    <h2>Your cart is empty...</h2>
+                    <Link to='/'>
+                        <Button value="Keep Buying"/>
+                    </Link>
+                </div>
     }
     return (
         <div>
@@ -30,7 +38,7 @@ const CartWiew = () => {
                             <td>${product.price}</td>
                             <td>{product.quantity}</td>
                             <td className={style.subtotal}>${product.quantity * product.price}</td>
-                        <td className="acciones"><button onClick={()=>removeProduct(product.id)}>Delete</button></td>
+                        <td className="acciones"><button onClick={()=>removeProduct(product.id)}><DeleteOutlineIcon/></button></td>
                     </tr>
                     ))}
                 </tbody>

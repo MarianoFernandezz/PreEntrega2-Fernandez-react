@@ -23,7 +23,7 @@ const CartProvider = ({ children }) => {
             newCart = [...cart , product]
         }
         setCart(newCart);
-        alert("Producto Agregado");
+        alert("Product Added");
     }
     console.log(cart)
     // funcion para sumar precio total

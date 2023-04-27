@@ -23,7 +23,7 @@ export default function PostItem({products}) {
                 </Typography>
             </CardContent>
             <CardActions>
-                <Button size="small">Buy now</Button>
+                <Button size="small">See more</Button>
                 
             </CardActions>
         </Card>

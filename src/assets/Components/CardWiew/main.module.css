@@ -1,4 +1,15 @@
-        table {
+.containerCardEmpty {
+    height: 80vh;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    
+    
+}
+table {
             margin: auto;
             margin-top: 20px;
             border-collapse: collapse;
