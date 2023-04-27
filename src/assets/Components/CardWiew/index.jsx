@@ -4,6 +4,8 @@ import style from './main.module.css'
 
 const CartWiew = () => {
     const { cart } = useContext(CartContext);
+    const { totalPrice } = useContext(CartContext);
+    const { removeProduct } = useContext(CartContext);
     if (cart.length == 0) {
         return <h1>Your cart is empty...</h1>
     }
@@ -22,21 +24,21 @@ const CartWiew = () => {
                 </thead>
                 <tbody>
                     {cart.map(product => (
-                        <tr>
+                        <tr key={product.id}>
                         <td><img className={style.imgTable} src={product.images} alt="Producto"/></td>
                             <td>{product.title}</td>
                             <td>${product.price}</td>
                             <td>{product.quantity}</td>
-                        <td className={style.subtotal}>$20.00</td>
-                        <td className="acciones"><button>Delete</button></td>
+                            <td className={style.subtotal}>${product.quantity * product.price}</td>
+                        <td className="acciones"><button onClick={()=>removeProduct(product.id)}>Delete</button></td>
                     </tr>
                     ))}
                 </tbody>
                 <tfoot>
                     <tr>
-                        <td colspan="4"></td>
-                        <td class="subtotal">$85.00</td>
-                        <td></td>
+                        <td colspan="3"></td>
+                        <td><strong>Final Price:</strong></td>
+                        <td class={style.subtotal}>${totalPrice()}</td>
                     </tr>
                 </tfoot>
             </table>

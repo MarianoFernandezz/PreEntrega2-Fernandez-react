@@ -26,6 +26,9 @@ const CartProvider = ({ children }) => {
         alert("Producto Agregado");
     }
     console.log(cart)
+    // funcion para sumar precio total
+    const totalPrice = () => cart.reduce((acc, product) => acc + product.quantity * product.price,0) 
+
     // funcion para limpiar el carrito
     const cleanCart = () => setCart([]);
     // funcion para saber si un item existe en el carrito
@@ -33,14 +36,15 @@ const CartProvider = ({ children }) => {
     // funcion para remover un item
     const removeProduct = (id) => {
         setCart(cart.filter(product => product.id !== id));
-
     }
+    
     return (
         <CartContext.Provider value={{
             cleanCart,
             isInCart,
             removeProduct,
             addToCard,
+            totalPrice,
             cart
         }}>
             {children}
