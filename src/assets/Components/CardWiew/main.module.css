@@ -9,6 +9,11 @@
     
     
 }
+.containerPurchase {
+    width: 100%;
+    width: 200px;
+    margin: auto;
+}
 table {
             margin: auto;
             margin-top: 20px;

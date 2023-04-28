@@ -13,7 +13,7 @@ const CartWiew = () => {
         return <div className={style.containerCardEmpty}>
                     <h2>Your cart is empty...</h2>
                     <Link to='/'>
-                        <Button value="Keep Buying"/>
+                        <Button value="Keep exploring"/>
                     </Link>
                 </div>
     }
@@ -47,9 +47,17 @@ const CartWiew = () => {
                         <td colspan="3"></td>
                         <td><strong>Final Price:</strong></td>
                         <td class={style.subtotal}>${totalPrice()}</td>
+                        <td><button>Clean Cart</button></td>
                     </tr>
                 </tfoot>
             </table>
+            <div className={style.containerPurchase}>
+                <Link to='/checkout'>
+                    <Button value='Generate Order'/>
+                </Link>
+                
+            </div>
+            
         </div>
     )
 }
