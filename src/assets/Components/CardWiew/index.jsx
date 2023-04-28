@@ -7,8 +7,8 @@ import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 
 const CartWiew = () => {
     const { cart } = useContext(CartContext);
-    const { totalPrice } = useContext(CartContext);
-    const { removeProduct } = useContext(CartContext);
+    const { totalPrice , removeProduct } = useContext(CartContext);
+
     if (cart.length == 0) {
         return <div className={style.containerCardEmpty}>
                     <h2>Your cart is empty...</h2>
