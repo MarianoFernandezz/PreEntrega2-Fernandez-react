@@ -1,8 +1,42 @@
-import React from 'react'
+import React, { useContext, useState } from 'react'
 import style from './checkout.module.css'
 import Button from '../Button'
+import { addDoc, collection, getFirestore } from 'firebase/firestore'
+import { CartContext } from '../../contexts/CartContext'
 
 const Checkout = () => {
+    const [fullname, setFullname] = useState('');
+    const [email, setEmail] = useState('');
+    const [address, setAddress] = useState('');
+    const [phone, setPhone] = useState('');
+    const [orderconfirm, setOrderconfirm] = useState(false);
+    // hacemos un destructuring para acceder a los valores del CartContext
+    const { cart, totalPrice } = useContext(CartContext);
+    const order = {
+        buyer: {
+            fullName:fullname,
+            email:email,
+            address:address,
+            phone:phone
+        },
+        products: cart.map(product => ({ id: product.id, title: product.title, quantity: product.quantity, price: product.price })),
+        totalPrice: totalPrice()
+    }
+    //funcion para agregar la orden a la collection de firestore
+    const handleClick = (e) => {
+        e.preventDefault()
+        // guardamos firestore en una variable
+        const database = getFirestore();
+        // guardamos en una variable la llamada firestore y la colletion donde vamos a hacer el post
+        const ordersCollection = collection(database, "orders");
+        // metodo para hacer el post recibe 2 parametros, la colletion y lo que queremos enviar (en este caso un objeto con la orden)
+        addDoc(ordersCollection,order)
+            .then(({ id }) => console.log(id));
+        alert('orden generada');
+    }
+    if (orderconfirm) return {
+
+    }
     return (
         <div className={style.card}>
             <div className={style.cardHeader}>
@@ -11,22 +45,26 @@ const Checkout = () => {
             <div className={style.cardBody}>
                 <form action="#">
                     <div className={style.formGroup}>
-                        <label for="username">Full Name:</label>
-                        <input required="" className={style.formControl} name="username" id="username" type="text"/>
+                        <label for="fullname">Full Name:</label>
+                        <input required="" className={style.formControl} name="fullname" id="fullname" type="text" onChange={e => setFullname(e.target.value)} />
                     </div>
                     <div className={style.formGroup}>
                         <label for="email">Email:</label>
-                        <input required="" className={style.formControl} name="email" id="email" type="email"/>
+                        <input required="" className={style.formControl} name="email" id="email" type="email" onChange={e => setEmail(e.target.value)} />
                     </div>
                     <div className={style.formGroup}>
                         <label for="confirm-mail">Confirm Email:</label>
                         <input required="" className={style.formControl} name="confirm-mail" id="confirm-mail" type="email" />
                     </div>
                     <div className={style.formGroup}>
-                        <label for="phone">Phone:</label>
-                        <input required="" className={style.formControl} name="phone" id="phone" type="text"/>
+                        <label for="address">Address:</label>
+                        <input required="" className={style.formControl} name="address" id="address" type="text" onChange={e => setAddress(e.target.value)} />
                     </div>
-                    <Button value='Generate Order'/>
+                    <div className={style.formGroup}>
+                        <label for="phone">Phone:</label>
+                        <input required="" className={style.formControl} name="phone" id="phone" type="text" onChange={e => setPhone(e.target.value)} />
+                    </div>
+                    <Button onClick={handleClick} value='Generate Order'/>
                 </form>
             </div>
         </div>
