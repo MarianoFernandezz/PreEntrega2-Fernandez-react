@@ -53,7 +53,7 @@ const CartWiew = () => {
             </table>
             <div className={style.containerPurchase}>
                 <Link to='/checkout'>
-                    <Button value='Generate Order'/>
+                    <Button value='Generate Purchase'/>
                 </Link>
                 
             </div>
