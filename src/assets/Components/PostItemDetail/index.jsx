@@ -5,6 +5,8 @@ import AddItemButton from '../AddItemButton';
 import Button from '../Button';
 import { Link } from 'react-router-dom';
 import { CartContext } from '../../contexts/CartContext';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const PostItemDetail = ({ products }) => {
     const [gotocard, setGotocard] = useState(false);
@@ -15,6 +17,17 @@ const PostItemDetail = ({ products }) => {
     const addItem = () => {
         setGotocard(true)
         addToCard(products, counter);
+        toast.success('Product Added!', {
+            position: "bottom-right",
+            autoClose: 3500,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
+
     }
     return (
         <div className={style.container}>
@@ -36,7 +49,18 @@ const PostItemDetail = ({ products }) => {
                     <Link to='/cart'>
                         <Button value="GO TO CART"/>
                     </Link>
-                    
+                    <ToastContainer
+                        position="bottom-right"
+                        autoClose={3500}
+                        hideProgressBar={false}
+                        newestOnTop={false}
+                        closeOnClick
+                        rtl={false}
+                        pauseOnFocusLoss
+                        draggable
+                        pauseOnHover
+                        theme="light"
+                    />
 
                 </div>
             </div>
