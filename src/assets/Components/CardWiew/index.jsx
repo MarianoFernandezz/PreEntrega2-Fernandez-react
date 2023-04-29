@@ -7,7 +7,7 @@ import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 
 const CartWiew = () => {
     const { cart } = useContext(CartContext);
-    const { totalPrice , removeProduct } = useContext(CartContext);
+    const { totalPrice , removeProduct, cleanCart} = useContext(CartContext);
 
     if (cart.length == 0) {
         return <div className={style.containerCardEmpty}>
@@ -47,7 +47,7 @@ const CartWiew = () => {
                         <td colspan="3"></td>
                         <td><strong>Final Price:</strong></td>
                         <td class={style.subtotal}>${totalPrice()}</td>
-                        <td><button>Clean Cart</button></td>
+                        <td><button onClick={()=>cleanCart()}>Clean Cart</button></td>
                     </tr>
                 </tfoot>
             </table>

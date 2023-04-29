@@ -1,9 +1,9 @@
 import React from 'react'
 import style from './button.module.css'
 
-const Button = ({value , onClick}) => {
+const Button = ({value , onClick , onSubmit , type}) => {
     return (
-        <button className={style.buttonAddToCard} onClick={onClick}>{value}</button>
+        <button type={type} className={style.buttonAddToCard} onSubmit={onSubmit} onClick={onClick}>{value}</button>
     )
 }
 
